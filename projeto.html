@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Paises.css">
+    <title>PAÍSES</title>
+</head>
+<body>
+    <h3>PAÍSES</h3>
+
+    <div class="pais-container">
+        <div class="pais" onclick="mostrarConteudo('japao')">JAPÃO</div>
+        <div id="japao" class="bandeira bandeira-japao">
+            <div class="circulo"></div>
+        </div>
+    </div>
+
+    <div class="pais-container">
+        <div class="pais" onclick="mostrarConteudo('italia')">ITÁLIA</div>
+        <div id="italia" class="bandeira">
+            <div class="faixa-italia verde"></div>
+            <div class="faixa-italia branca"></div>
+            <div class="faixa-italia vermelha"></div>
+        </div>
+    </div>
+
+    <div class="pais-container">
+        <div class="pais" onclick="mostrarConteudo('holanda')">HOLANDA</div>
+        <div id="holanda" class="bandeira">
+            <div class="vermelha-holanda"></div>
+            <div class="branca-holanda"></div>
+            <div class="azul-holanda"></div>
+        </div>
+    </div>
+
+    <div class="pais-container">
+        <div class="pais" onclick="mostrarConteudo('franca')">FRANÇA</div>
+        <div id="franca" class="bandeira">
+            <div class="azul-franca"></div>
+            <div class="branca-franca"></div>
+            <div class="vermelha-franca"></div>
+        </div>
+    </div>
+
+    <div class="pais-container">
+        <div class="pais" onclick="mostrarConteudo('alemanha')">ALEMANHA</div>
+        <div id="alemanha" class="bandeira">
+            <div class="preta"></div>
+            <div class="vermelha-alemanha"></div>
+            <div class="amarela"></div>
+        </div>
+    </div>
+
+    <script>
+        function mostrarConteudo(id) {
+            var conteudo = document.getElementById(id);
+
+            if (conteudo.style.opacity === "0" || conteudo.style.opacity === "") {
+                conteudo.style.width = "600px";
+                conteudo.style.height = "400px";
+                conteudo.style.opacity = "1";
+            } else {
+                conteudo.style.width = "0";
+                conteudo.style.height = "0";
+                conteudo.style.opacity = "0";
+            }
+        }
+    </script>
+</body>
+</html>
